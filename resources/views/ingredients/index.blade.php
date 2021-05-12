@@ -14,14 +14,24 @@
     <h1>Coffee Machine Stock</h1>
 
     <h2>Current Stock Levels</h2>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Ingredient</th>
+      <th scope="col">Stock Level</th>
+    </tr>
+  </thead>
+  <tbody>
     @foreach($ingredients as $ingredient)
-        <div class="form-row">
-            <div class="col-md-4">
-                <span>Ingredient: {{ $ingredient->ingredient }}</span>
-                <span>Stock Level: {{ $ingredient->stock_level }}</span>
-            </div>
-
+    <tr>
+      <td>{{ $ingredient->ingredient }}</td>
+      <td>{{ $ingredient->stock_level }}</td>
+    </tr>
     @endforeach
+  </tbody>
+</table>
+
+<hr>
 
     <h2>Add Stock</h2>
     <form>
