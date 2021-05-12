@@ -13,7 +13,17 @@
   <body class="container">
     <h1>Coffee Machine Stock</h1>
 
+    <h2>Current Stock Levels</h2>
+    @foreach($ingredients as $ingredient)
+        <div class="form-row">
+            <div class="col-md-4">
+                <span>Ingredient: {{ $ingredient->ingredient }}</span>
+                <span>Stock Level: {{ $ingredient->stock_level }}</span>
+            </div>
 
+    @endforeach
+
+    <h2>Add Stock</h2>
     <form>
         <div class="form-row">
             <div class="form-group col-md-4">

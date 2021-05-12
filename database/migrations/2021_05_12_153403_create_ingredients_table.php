@@ -16,9 +16,15 @@ class CreateIngredientsTable extends Migration
         Schema::create('ingredients', function (Blueprint $table) {
             $table->id();
             $table->string('ingredient');
-            $table->integer('stock_level')->default('0');
+            $table->integer('stock_level');
             $table->timestamps();
         });
+
+        DB::table('ingredients')->insert([
+            ['ingredient' => 'Coffee', 'stock_level' => 500],
+            ['ingredient' => 'Milk', 'stock_level' => 1000],
+            ['ingredient' => 'Sugar', 'stock_level' => 500],
+        ]);
     }
 
     /**
