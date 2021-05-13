@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('stock', IngredientController::class);
-Route::patch('stock/{stock}', [IngredientController::class, 'update']);
+//Route::patch('stock/{stock}', [IngredientController::class, 'update']);
