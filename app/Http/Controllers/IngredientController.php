@@ -73,7 +73,11 @@ class IngredientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ingredient = Ingredient::find($id);
+        $ingredient->stock_level = $request->input('stock');
+        $ingredient->save();
+        return redirect()->route('main.index')->with('update','Stock has been added');
+
     }
 
     /**
