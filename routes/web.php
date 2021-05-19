@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('order', [IngredientController::class, 'order']);
 Route::resource('stock', IngredientController::class);
-//Route::patch('stock/{stock}', [IngredientController::class, 'update']);

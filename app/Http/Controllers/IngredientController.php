@@ -84,6 +84,12 @@ class IngredientController extends Controller
         return redirect('/stock')->with('update','Stock has been added');
     }
 
+    public function order()
+    {
+        $ingredients = Ingredient::all();
+        return View('order');
+    }
+
     /**
      * Remove the specified resource from storage.
      *
