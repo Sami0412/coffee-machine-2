@@ -17,8 +17,8 @@
     @method('PATCH')
         <div class="form-row">
             <div class="form-group col-md-4">
-                <label for="ingredient">{{ $ingredient->ingredient }}</label>
-                <input type="number" class="form-control" id="ingredient" value="{{ $ingredient->stock_level }}" name="ingredient">
+                <label for="stockLevel">{{ $ingredient->ingredient }}</label>
+                <input type="number" class="form-control" id="stockLevel" value="{{ $ingredient->stock_level }}" name="stockLevel">
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Add to Machine</button>
