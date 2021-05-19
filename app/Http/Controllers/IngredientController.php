@@ -79,10 +79,9 @@ class IngredientController extends Controller
         ]);
 
         $ingredient = Ingredient::find($id);
-        $ingredient->stock_level = $request->input('stockLevel');
+        $ingredient->stock_level = $ingredient->stock_level + $request->input('stockLevel');
         $ingredient->save();
         return redirect('/stock')->with('update','Stock has been added');
-
     }
 
     /**

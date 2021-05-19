@@ -31,6 +31,11 @@
         @endforeach
       </tbody>
     </table>
+    @if(session()->has('update'))
+      <div class="alert alert-success">
+          {{ session()->get('update') }}
+      </div>
+    @endif
     <a class="btn btn-small btn-info" href="{{ URL::to('/order') }}">Order a Coffee</a>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
